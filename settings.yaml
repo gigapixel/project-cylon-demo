@@ -1,0 +1,13 @@
+# test project configuration file
+---
+#
+# Browser to run test (!now support only firefox).
+#
+RUN_ON_BROWSER: firefox
+
+#
+# Switch page URL to the specified site.
+# To use this option you need to add "site_url:" section in your page object.
+#
+SITE_URL: default
+...

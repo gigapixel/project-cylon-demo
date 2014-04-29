@@ -1,0 +1,13 @@
+# Stock Details Page
+---
+page:
+  name: StockInfoPage
+  title: SETTRADE.COM
+  url: http://www.settrade.com/C04_01_stock_quote_p1.jsp
+
+elements:
+- name: div_symbol
+  xpath: //*[@id="cnt"]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div/div/div/div/div[1]
+- name: div_price
+  xpath: //*[@id="cnt"]/div[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div/div/div/div/div[4]
+...
