@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="1" failures="0" name="StockSearchDisplay.Settrade stock search" skipped="0" tests="4" time="21.795743"><testcase classname="StockSearchDisplay.Settrade stock search" name="Verify stock info display correct symbol" status="failed" time="5.58931"><error message="exceptions must be old-style classes or derived from BaseException, not str" type="TypeError">
+<![CDATA[
+Failing step: And The system displays '99' items of [images] ... failed in 0.138s
+Location: features/StockSearchDisplay.feature:6
+Traceback (most recent call last):
+  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/behave/model.py", line 1173, in run
+    match.run(runner.context)
+  File "/usr/local/Cellar/python/2.7.6/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/behave/model.py", line 1589, in run
+    self.func(context, *args, **kwargs)
+  File "/Users/Peerapat/Works/github/project-cylon/project_cylon/CommonSteps.py", line 209, in step
+    Element.VerifyItemsCount(Amount)
+  File "/Users/Peerapat/Works/github/project-cylon/project_cylon/PageObject.py", line 231, in VerifyItemsCount
+    Log.Failed("Verify elements count '%s'" % self.name, self.Count, count)
+  File "/Users/Peerapat/Works/github/project-cylon/project_cylon/Logger.py", line 56, in Failed
+    raise "(Failed)"
+TypeError: exceptions must be old-style classes or derived from BaseException, not str
+
+Captured stdout:
+Verify elements count 'images'
+actual: '102'
+expect: '99'
+
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Verify stock info display correct symbol
+    Given User has [SettradeHomePage] open ... passed in 5.451s
+    And The system displays '99' items of [images] ... failed in 0.138s
+    When User enters 'ICHI' to [txt_symbol] ... skipped in 0.000s
+    And User clicks [btn_search] link ... skipped in 0.000s
+    Then The system displays [StockInfoPage] ... skipped in 0.000s
+    And The [div_symbol] shows 'ICHI' ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Verify elements count 'images'
+actual: '102'
+expect: '99'
+
+
+]]>
+</system-out></testcase><testcase classname="StockSearchDisplay.Settrade stock search" name="Verify stock info display correct symbol, last price is between floor and ceil" status="passed" time="5.673562"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Verify stock info display correct symbol, last price is between floor and ceil
+    Given User has [SettradeHomePage] open ... passed in 3.711s
+    When User enters 'ADVANC' to [txt_symbol] ... passed in 0.202s
+    And User clicks [btn_search] link ... passed in 1.613s
+    Then The system displays [StockInfoPage] ... passed in 0.031s
+    And The [div_symbol] shows 'ADVANC' ... passed in 0.020s
+    And The [div_price] more than '171.00' ... passed in 0.030s
+    And The [div_price] less than '317.00' ... passed in 0.067s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="StockSearchDisplay.Settrade stock search" name="Verify stock info display correct symbol, last price is between floor and ceil" status="passed" time="5.416444"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Verify stock info display correct symbol, last price is between floor and ceil
+    Given User has [SettradeHomePage] open ... passed in 3.167s
+    When User enters 'INTUCH' to [txt_symbol] ... passed in 0.210s
+    And User clicks [btn_search] link ... passed in 1.903s
+    Then The system displays [StockInfoPage] ... passed in 0.020s
+    And The [div_symbol] shows 'INTUCH' ... passed in 0.032s
+    And The [div_price] more than '55.00' ... passed in 0.060s
+    And The [div_price] less than '99.00' ... passed in 0.025s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="StockSearchDisplay.Settrade stock search" name="Verify stock info display correct symbol, last price is between floor and ceil" status="passed" time="5.116428"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario Outline: Verify stock info display correct symbol, last price is between floor and ceil
+    Given User has [SettradeHomePage] open ... passed in 3.263s
+    When User enters 'MCOT' to [txt_symbol] ... passed in 0.200s
+    And User clicks [btn_search] link ... passed in 1.521s
+    Then The system displays [StockInfoPage] ... passed in 0.027s
+    And The [div_symbol] shows 'MCOT' ... passed in 0.029s
+    And The [div_price] more than '20.20' ... passed in 0.053s
+    And The [div_price] less than '37.25' ... passed in 0.024s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

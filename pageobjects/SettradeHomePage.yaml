@@ -10,4 +10,6 @@ elements:
   xpath: //*[@id="symbolMenu"]
 - name: btn_search
   xpath: //*[@id="srchbg"]/div/form/div[2]/a
+- name: images
+  xpath: //img
 ...
