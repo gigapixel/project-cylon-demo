@@ -1,8 +1,5 @@
 Feature: Stock search 1
 
-@basic
-Feature: Settrade stock search
-
 @simple
 Scenario: Verify stock info display correct symbol
     Given User has [SettradeHomePage] open

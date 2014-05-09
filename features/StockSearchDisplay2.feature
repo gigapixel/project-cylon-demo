@@ -1,4 +1,4 @@
-Feature: Settrade stock search
+Feature: Stock search 2
 
 @basic
 Scenario: Verify stock info display correct symbol
