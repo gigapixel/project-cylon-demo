@@ -1,0 +1,11 @@
+# Watir Example Response Page
+---
+page:
+  name: Watir Example Response
+  title: Watir Example
+  url: https://spreadsheets.google.com/spreadsheet/formResponse?hl=en&formkey=dDliTk5XU1R4RUMtb2c1WDZxWHNENmc6MQ&ifq
+
+elements:
+- name: error message
+  xpath: /html/body/div/div/div[@class="ss-confirmation"]
+...
