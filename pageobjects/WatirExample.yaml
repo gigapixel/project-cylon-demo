@@ -2,7 +2,6 @@
 ---
 page:
   name: Watir Example
-  title: Watir Example
   url: https://spreadsheets.google.com/viewform?hl=en&formkey=dDliTk5XU1R4RUMtb2c1WDZxWHNENmc6MQ#gid=0
 
 elements:
