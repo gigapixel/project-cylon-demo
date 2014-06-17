@@ -1,0 +1,40 @@
+--- # Example Form
+page:
+  name: Example Form
+  url: https://docs.google.com/forms/d/1DAwwxlkc_uA7PG0zOGFam8UrlCmHOHbGkUyi17cMGHg
+  url_paths:
+  - name: view form
+    path: /viewform
+  - name: form response
+    path: /formResponse
+
+elements:
+- name: number input
+  xpath: //*[@id="entry_58827803"]
+- name: number input error message
+  xpath: (//*[@class="ss-form-entry"])[1]/div[@class="error-message"]
+- name: selenium option
+  xpath: //*[@id="group_773091708_1"]
+- name: watir option
+  xpath: //*[@id="group_773091708_2"]
+- name: capybara option
+  xpath: //*[@id="group_773091708_3"]
+- name: csharp box
+  xpath: //*[@id="group_1966593858_1"]
+- name: java box
+  xpath: //*[@id="group_1966593858_2"]
+- name: python box
+  xpath: //*[@id="group_1966593858_3"]
+- name: ruby box
+  xpath: //*[@id="group_1966593858_4"]
+- name: browser list
+  xpath: //*[@id="entry_1722332823"]
+- name: comment area
+  xpath: //*[@id="entry_1019074217"]
+- name: submit button
+  xpath: //*[@id="ss-submit"]
+- name: response message
+  xpath: //*[@class="ss-resp-message"]
+- name: submit another response link
+  xpath: //*[@class="ss-bottom-link"]
+...
