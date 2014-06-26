@@ -1,13 +1,23 @@
 @sanity_test
 Feature: Sanity Test
 
+@test_special_keyword
+Scenario: Special keyword test
+	Given User has [Example Form/view form] page opened
+	And the [number input error message] is invisible
+	When user enters '125' to the [number input]
+	When the [number input] value contains '12', user selects the [watir option]
+	When the [number input] value contains '13', user selects the [selenium option]
+	Then the [selenium option] is selected, accept fail
+	And the [watir option] is selected
+
 @test_text_error
 Scenario: Text input test invalid
 	Given User has [Example Form/view form] page opened
-	And The [number input error message] is invisible
-	When User enters 'test' to the [number input]
-	And User selects the [selenium option]
-	Then The [number input error message] is visible
+	  And The [number input error message] is invisible
+	 When User enters 'test' to the [number input]
+	  And User selects the [selenium option]
+	 Then The [number input error message] is visible
 
 @test_text
 Scenario: Text input test
@@ -55,12 +65,27 @@ Scenario: Select list test
 @test_textarea
 Scenario: Text area test
 	Given User has [Example Form/view form] page opened
-	  And The [comment area] value is empty
-	 When User enters 'no comment.' to the [comment area]
-	 Then The [comment area] value is not empty
-	  And The [comment area] value is 'no comment.'
-	 When User clears value on the [comment area]
-	 Then The [comment area] value is empty
+	And The [comment area] value is empty
+	When User enters following lines to the [comment area]
+		"""
+		- python
+		- ruby
+		- java
+		"""
+	Then The [comment area] value is not empty
+	And The [comment area] value is
+		"""
+		- python
+		- ruby
+		- java
+		"""
+	And The [comment area] value contains
+		"""
+		- python
+		- ruby
+		"""
+	When User clears value on the [comment area]
+	Then The [comment area] value is empty
 
 @test_button
 Scenario: Submit button test
