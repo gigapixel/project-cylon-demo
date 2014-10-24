@@ -1,0 +1,13 @@
+--- # Example Form
+page:
+  name: BootsWatch
+  url: http://bootswatch.com
+  url_paths:
+  - name: default
+    path: /default
+  - name: united
+    path: /united
+
+elements:
+- name: lbl_theme_name
+  xpath: //*[@id="banner"]/div/div[1]/h1
